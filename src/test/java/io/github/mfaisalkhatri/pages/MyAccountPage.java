@@ -2,10 +2,7 @@ package io.github.mfaisalkhatri.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.*;
 
 public class MyAccountPage {
 
@@ -13,7 +10,8 @@ public class MyAccountPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(how = How.CSS, using = "#content > div:nth-child(1) h2")
+    @FindBy(css = "#content > div:nth-child(1) h2")
+    @CacheLookup
     private WebElement myAccountTitle;
 
     public String getMyAccountPageTitle() {
@@ -21,8 +19,8 @@ public class MyAccountPage {
     }
 
     @FindAll({
-            @FindBy(how = How.LINK_TEXT, using = "Logout1"),
-            @FindBy(how = How.CSS, using = "#column-right > div > a:nth-child(15)")
+            @FindBy(how = How.LINK_TEXT, using = "Logout"),
+            @FindBy(how = How.CSS, using = "#column-right > div > a:nth-child(14)")
     })
     private WebElement logoutLink;
 
