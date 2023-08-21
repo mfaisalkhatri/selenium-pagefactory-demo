@@ -1,7 +1,7 @@
 package io.github.mfaisalkhatri.tests;
 
-import io.github.mfaisalkhatri.pages.LoginPage;
-import io.github.mfaisalkhatri.pages.MyAccountPage;
+import io.github.mfaisalkhatri.pages.lambdatestecommerce.LoginPage;
+import io.github.mfaisalkhatri.pages.lambdatestecommerce.MyAccountPage;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
