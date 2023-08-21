@@ -28,7 +28,7 @@ public class LoginPage {
     @FindBy(how = How.NAME, using = "password" )
     private WebElement passwordField;
 
-    @FindBy (how = How.CSS, using= "input[type=\"submit\"]")
+    @FindBy (css = "input[type=\"submit\"]")
     private WebElement loginBtn;
 
     public MyAccountPage performLogin(final String userName, final String password) {
