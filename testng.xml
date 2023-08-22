@@ -6,7 +6,7 @@
             <class name="io.github.mfaisalkhatri.tests.LambdaTestEcommercePlaygroundTests">
                 <methods>
                     <include name="testLoginWithFindBy"/>
-                    <exclude name="testLoginWithFindBys"/>
+                    <include name="testLoginWithFindBys"/>
                 </methods>
             </class>
         </classes>
@@ -15,10 +15,10 @@
         <classes>
             <class name="io.github.mfaisalkhatri.tests.SeleniumPlaygroundTests">
                 <methods>
-                    <exclude name="testMenus"/>
-                    <exclude name="testSimpleFormPage"/>
+                    <include name="testMenus"/>
+                    <include name="testSimpleFormPage"/>
                     <include name="testMaleRadioBtnSelection"/>
-                    <exclude name="testInputFormDemo"/>
+                    <include name="testInputFormDemo"/>
                 </methods>
             </class>
         </classes>
