@@ -7,12 +7,9 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class SimpleFormPage {
-    private final WebDriver driver;
     public SimpleFormPage(final WebDriver driver) {
-        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
 
     @FindBy(how = How.ID, using="user-message")
     private WebElement enterMessageField;
@@ -20,10 +17,17 @@ public class SimpleFormPage {
     @FindBy(id = "showInput")
     private WebElement getCheckedValueBtn;
 
+    @FindBy(id = "messages")
+    private WebElement getMessage;
 
-    public void enterMessage() {
-        this.enterMessageField.sendKeys("This is a test message");
+
+    public void enterMessage(final String message) {
+        this.enterMessageField.sendKeys(message);
         this.getCheckedValueBtn.click();
+    }
+
+    public String getMessage () {
+        return this.getMessage.getText();
     }
 
 
