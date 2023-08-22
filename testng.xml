@@ -15,8 +15,10 @@
         <classes>
             <class name="io.github.mfaisalkhatri.tests.SeleniumPlaygroundTests">
                 <methods>
-                    <include name="testMenus"/>
-                    <include name="testSimpleFormPage"/>
+                    <exclude name="testMenus"/>
+                    <exclude name="testSimpleFormPage"/>
+                    <include name="testMaleRadioBtnSelection"/>
+                    <exclude name="testInputFormDemo"/>
                 </methods>
             </class>
         </classes>

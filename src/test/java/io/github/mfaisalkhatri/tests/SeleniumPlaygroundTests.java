@@ -1,10 +1,13 @@
 package io.github.mfaisalkhatri.tests;
 
+import io.github.mfaisalkhatri.pages.seleniumplayground.InputFormDemoPage;
 import io.github.mfaisalkhatri.pages.seleniumplayground.MainPage;
+import io.github.mfaisalkhatri.pages.seleniumplayground.RadioButtonDemoPage;
 import io.github.mfaisalkhatri.pages.seleniumplayground.SimpleFormPage;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class SeleniumPlaygroundTests extends BaseTest {
 
@@ -24,4 +27,20 @@ public class SeleniumPlaygroundTests extends BaseTest {
         simpleFormPage.enterMessage(message);
         assertEquals(simpleFormPage.getMessage(), message);
     }
+
+    @Test
+    public void testMaleRadioBtnSelection() {
+        this.driverManager.getDriver().get("https://www.lambdatest.com/selenium-playground/radiobutton-demo");
+        final var radioButtonDemoPage = new RadioButtonDemoPage(this.driverManager.getDriver());
+        radioButtonDemoPage.selectMaleRadioBtn();
+        assertTrue(radioButtonDemoPage.isMaleRadioButtonSelected());
+    }
+
+    @Test
+    public void testInputFormDemo() {
+        this.driverManager.getDriver().get("https://www.lambdatest.com/selenium-playground/input-form-demo");
+        final var inputFormDemoPage = new InputFormDemoPage(this.driverManager.getDriver());
+        inputFormDemoPage.fillForm("Faisal");
+    }
+
 }
