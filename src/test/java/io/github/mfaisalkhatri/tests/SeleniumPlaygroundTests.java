@@ -45,7 +45,12 @@ public class SeleniumPlaygroundTests extends BaseTest {
         this.driverManager.getDriver().get("https://www.lambdatest.com/selenium-playground/table-pagination-demo");
         final var tablePagination = new TablePaginationPage(this.driverManager.getDriver());
         assertEquals(tablePagination.numberOfColumnsInTheTable(), 5);
-
     }
 
+    @Test
+    public void testAjaxFormSubmit() {
+        this.driverManager.getDriver().get("https://www.lambdatest.com/selenium-playground/ajax-form-submit-demo");
+        final var ajaxFormSubmitPage = new AjaxFormSubmitDemoPage(this.driverManager.getDriver());
+        ajaxFormSubmitPage.fillForm("Faisal");
+    }
 }
