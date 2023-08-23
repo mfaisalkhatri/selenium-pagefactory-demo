@@ -16,7 +16,7 @@ public class RadioButtonDemoPage {
 
     @FindBys({
             @FindBy(how = How.CLASS_NAME, using = "container"),
-            @FindBy(css = "input[value=\"Male\"]")
+            @FindBy(css = "input[value=\"Males\"]")
     })
     private WebElement maleRadioBtn;
 

@@ -1,9 +1,6 @@
 package io.github.mfaisalkhatri.tests;
 
-import io.github.mfaisalkhatri.pages.seleniumplayground.InputFormDemoPage;
-import io.github.mfaisalkhatri.pages.seleniumplayground.MainPage;
-import io.github.mfaisalkhatri.pages.seleniumplayground.RadioButtonDemoPage;
-import io.github.mfaisalkhatri.pages.seleniumplayground.SimpleFormPage;
+import io.github.mfaisalkhatri.pages.seleniumplayground.*;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -41,6 +38,14 @@ public class SeleniumPlaygroundTests extends BaseTest {
         this.driverManager.getDriver().get("https://www.lambdatest.com/selenium-playground/input-form-demo");
         final var inputFormDemoPage = new InputFormDemoPage(this.driverManager.getDriver());
         inputFormDemoPage.fillForm("Faisal");
+    }
+
+    @Test
+    public void testTablePagination() {
+        this.driverManager.getDriver().get("https://www.lambdatest.com/selenium-playground/table-pagination-demo");
+        final var tablePagination = new TablePaginationPage(this.driverManager.getDriver());
+        assertEquals(tablePagination.numberOfColumnsInTheTable(), 5);
+
     }
 
 }
