@@ -5,8 +5,22 @@
         <classes>
             <class name="io.github.mfaisalkhatri.tests.LambdaTestEcommercePlaygroundTests">
                 <methods>
-                    <include name="testLoginWithFindBy"/>
-                    <exclude name="testLoginWithFindBys"/>
+                    <include name="testLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Page Factory demo tests using LambdaTest Selenium Playground">
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.SeleniumPlaygroundTests">
+                <methods>
+                    <include name="testMenus"/>
+                    <include name="testSimpleFormPage"/>
+                    <include name="testMaleRadioBtnSelection"/>
+                    <include name="testInputFormDemo"/>
+                    <include name="testTablePagination"/>
+                    <include name="testAjaxFormSubmit"/>
+                    <include name="testStatusCodes"/>
                 </methods>
             </class>
         </classes>

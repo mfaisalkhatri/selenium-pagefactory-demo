@@ -1,4 +1,4 @@
-package io.github.mfaisalkhatri.pages;
+package io.github.mfaisalkhatri.pages.lambdatestecommerce;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
