@@ -5,12 +5,12 @@
         <classes>
             <class name="io.github.mfaisalkhatri.tests.LambdaTestEcommercePlaygroundTests">
                 <methods>
-                    <include name="testLoginWithFindBy"/>
+                    <include name="testLogin"/>
                 </methods>
             </class>
         </classes>
     </test> <!-- Test -->
-    <test name="Page Factory demo tests using LambdaTest Selenium Playground" enabled="false">
+    <test name="Page Factory demo tests using LambdaTest Selenium Playground">
         <classes>
             <class name="io.github.mfaisalkhatri.tests.SeleniumPlaygroundTests">
                 <methods>

@@ -52,5 +52,4 @@ public class DriverManager {
     public void quitDriver() {
         this.driver.quit();
     }
-
 }

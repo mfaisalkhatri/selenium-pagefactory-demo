@@ -10,7 +10,7 @@ public class LambdaTestEcommercePlaygroundTests extends BaseTest {
 
 
     @Test
-    public void testLoginWithFindBy() {
+    public void testLogin() {
         this.driverManager.getDriver().get("https://ecommerce-playground.lambdatest.io/index.php?route=account/login");
         final LoginPage loginPage = new LoginPage(this.driverManager.getDriver());
         final MyAccountPage myAccountPage = loginPage.performLogin("john+2@gmail.com", "Pass@1234");
