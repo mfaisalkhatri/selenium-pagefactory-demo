@@ -53,4 +53,12 @@ public class SeleniumPlaygroundTests extends BaseTest {
         final var ajaxFormSubmitPage = new AjaxFormSubmitDemoPage(this.driverManager.getDriver());
         ajaxFormSubmitPage.fillForm("Faisal");
     }
+
+    @Test
+    public void testStatusCodes() {
+        this.driverManager.getDriver().get("https://www.lambdatest.com/selenium-playground/status-code");
+        final var ajaxFormSubmitPage = new StatusCodePage(this.driverManager.getDriver());
+        ajaxFormSubmitPage.clickOnStatusCodes();
+    }
+
 }
