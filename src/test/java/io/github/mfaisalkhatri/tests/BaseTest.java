@@ -16,6 +16,7 @@ public class BaseTest {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
+
         this.driverManager.quitDriver();
     }
 }

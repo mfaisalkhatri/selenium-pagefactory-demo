@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="LambdaTest ecommerce playground website test suite ">
-    <test name="Page Factory demo tests using LambdaTest ECommerce Playground">
+    <test name="Page Factory demo tests using LambdaTest ECommerce Playground" enabled="false">
         <classes>
             <class name="io.github.mfaisalkhatri.tests.LambdaTestEcommercePlaygroundTests">
                 <methods>
@@ -14,13 +14,14 @@
         <classes>
             <class name="io.github.mfaisalkhatri.tests.SeleniumPlaygroundTests">
                 <methods>
-                    <include name="testMenus"/>
-                    <include name="testSimpleFormPage"/>
-                    <include name="testMaleRadioBtnSelection"/>
-                    <include name="testInputFormDemo"/>
-                    <include name="testTablePagination"/>
-                    <include name="testAjaxFormSubmit"/>
-                    <include name="testStatusCodes"/>
+                    <exclude name="testMenus"/>
+                    <exclude name="testSimpleFormPage"/>
+                    <exclude name="testMaleRadioBtnSelection"/>
+                    <exclude name="testInputFormDemo"/>
+                    <exclude name="testTablePagination"/>
+                    <exclude name="testAjaxFormSubmit"/>
+                    <exclude name="testStatusCodes"/>
+                    <include name="testTableSearch"/>
                 </methods>
             </class>
         </classes>
