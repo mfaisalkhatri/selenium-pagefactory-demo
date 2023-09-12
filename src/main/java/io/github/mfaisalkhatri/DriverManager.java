@@ -38,7 +38,7 @@ public class DriverManager {
         } catch (final MalformedURLException e) {
             throw new Error("RemoteDriver's URL not set correctly!", e);
         }
-        this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
     public void createChromeDriverLocal() {

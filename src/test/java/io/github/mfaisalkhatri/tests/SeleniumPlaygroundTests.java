@@ -61,4 +61,18 @@ public class SeleniumPlaygroundTests extends BaseTest {
         ajaxFormSubmitPage.clickOnStatusCodes();
     }
 
+    @Test
+    public void testTableSearch() {
+        final long startTime = System.currentTimeMillis();
+        this.driverManager.getDriver().get("https://www.lambdatest.com/selenium-playground/table-search-filter-demo");
+        final var tablesearchPage = new TableSearchPage(this.driverManager.getDriver());
+        assertEquals(tablesearchPage.pageHeaderText(),"Table Search filter");
+
+        tablesearchPage.searchForRecord("john", "ricky", "john");
+        System.out.println(tablesearchPage.tableRecordValues());
+
+        final  long endTime = System.currentTimeMillis();
+        System.out.println("Total time taken to run test in milli seconds " + (endTime-startTime));
+    }
+
 }
